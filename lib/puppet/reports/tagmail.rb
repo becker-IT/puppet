@@ -63,7 +63,7 @@ Puppet::Reports.register_report(:tagmail) do
         Puppet.info "No messages to report to #{emails.join(",")}"
         next
       else
-        matching_logs << [emails, messages.collect { |m| m.to_report }.join("\n")]
+        matching_logs << [emails, messages.collect { |m| m.to_report }.join("\n<p>")]
       end
     end
 
